@@ -1,0 +1,14 @@
+Future Items
+
+==> Fix power switch - OFF/ON line up at middle of div
+
+==> timeout when user idles for too long
+
+==> smaller size to play on smartphone
+
+==> “pushed look” for buttons (start, color buttons)
+
+==> animations after clicking
+
+==> if two consecutive tunes are identical, during playback, add delay to dim and brighten
+    presently the button kept lit and hard to detect multiple visually

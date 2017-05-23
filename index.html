@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="simonApp" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <title>Simon® Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="simonCtrl as CTRL">
+    <div class="outer-circle">
+        <div class="pie-green" id='dv-green' ng-click="CTRL.clickColorButton('G')"></div>
+        <div class="pie-red" id='dv-red' ng-click="CTRL.clickColorButton('R')"></div>
+        <div class="pie-yellow" id='dv-yellow' ng-click="CTRL.clickColorButton('Y')"></div>
+        <div class="pie-blue" id="dv-blue" ng-click="CTRL.clickColorButton('B')"></div>
+
+        <!-- center controls and display -->
+        <div id="ctrl-circle">
+            <p id="dv-simon">Simon <span style="font-size: medium; vertical-align: super;">®</span></p>
+            <div id="dv-control">
+                <div id="LED" class="unclickable">{{CTRL.LED}}</div>
+                <div id="dv-start" ng-click="CTRL.startGame()"></div>
+                <div id="dv-strict" ng-click="CTRL.togleStrictMode()"></div>
+            </div>
+            <div id="dv-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COUNT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;START &nbsp;&nbsp;&nbsp;STRICT</div>
+            <div style="margin-top: 20px; font-size: large; font-family: Arial">
+                <!-- power switch -->
+                <div style="display: inline-block;">OFF</div>
+                <div id="dv-pwr" ng-click="CTRL.powerOnOff()">
+                    <div id="dv-pwr-left"></div>
+                    <div id="dv-pwr-rite"></div>
+                </div>
+                <div style="display: inline-block">ON</div>
+            </div>
+        </div>
+    </div>
+
+<!--TODO refactor CSS -->
+
+<!--<script src='https://raw.githubusercontent.com/shinnn/AudioContext-Polyfill/master/audiocontext-polyfill.js'></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
